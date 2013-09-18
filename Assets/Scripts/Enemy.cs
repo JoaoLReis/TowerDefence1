@@ -5,7 +5,7 @@ public class Enemy : MonoBehaviour {
 	
 	private GameObject target;
 	
-	public float speed = 10;
+	public float speed = 30; 
 	
 	private Vector3 position;
 	
