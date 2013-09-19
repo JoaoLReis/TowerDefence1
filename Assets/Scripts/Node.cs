@@ -3,7 +3,9 @@ using System.Collections;
 
 public class Node : MonoBehaviour {
 	
-	public GameObject[] successors;
+	//public GameObject[] successors;
+	
+	public GameObject successor;
 	
 	public bool objective = false;
 	
@@ -12,6 +14,14 @@ public class Node : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		position = gameObject.transform.position;
+		GameObject[] gobj = GameObject.FindGameObjectsWithTag("Node");
+	    foreach (Object obj in gobj) {
+			if(int.Parse(obj.name) == (int.Parse(gameObject.name) + 1)) {
+				successor = (GameObject)obj;
+				Debug.Log(gameObject.name + " :sucessor->" + obj.name);
+			}
+
+	    }
 	}
 	
 	// Update is called once per frame
@@ -26,8 +36,10 @@ public class Node : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if(other.tag == "Enemy") {
 			if(!objective) {
-				if(successors.Length != 0) {
+				other.gameObject.GetComponent<Enemy>().setTarget(successor);
+				/*if(successors.Length != 0) {
 					if(successors.Length == 1){
+
 						other.gameObject.GetComponent<Enemy>().setTarget(successors[0]);
 					} /*else {
 						Debug.Log("checking");
@@ -37,13 +49,13 @@ public class Node : MonoBehaviour {
 								other.gameObject.GetComponent<Enemy>().setTarget(successors[i]);
 							}
 						}
-					}*/
-				}
+					}
+				}*/
 			}
 		}
     }
 	
-	private bool checkPath(GameObject obj) {
+	/*private bool checkPath(GameObject obj) {
 		GameObject[] suc = obj.GetComponent<Node>().successors;
 		if(obj.GetComponent<Node>().objective) {
 			Debug.Log("Objective");
@@ -59,5 +71,5 @@ public class Node : MonoBehaviour {
 			}
 		}
 		return false;
-	}
+	}*/
 }
