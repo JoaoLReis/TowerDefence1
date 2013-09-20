@@ -20,10 +20,10 @@ public class Enemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		position = gameObject.transform.position;
-		distance = Vector3.Distance(position, objective);
+		position = transform.position;
+		//distance = Vector3.Distance(position, objective);
 		transform.LookAt(new Vector3(objective.x, position.y, objective.z));
-	    transform.position = Vector3.Lerp (position, objective, Time.deltaTime* speed/distance);
+	    transform.position = Vector3.MoveTowards(position, new Vector3(objective.x, position.y, objective.z), speed);
     }
 	
 	public void setTarget(GameObject trgt) {

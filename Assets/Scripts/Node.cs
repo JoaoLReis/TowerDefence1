@@ -5,7 +5,7 @@ public class Node : MonoBehaviour {
 	
 	//public GameObject[] successors;
 	
-	public GameObject successor;
+	private GameObject successor;
 	
 	public bool objective = false;
 	
