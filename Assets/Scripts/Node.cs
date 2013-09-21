@@ -7,7 +7,7 @@ public class Node : MonoBehaviour {
 	
 	private GameObject successor;
 	
-	public bool objective = false;
+	//public bool objective = false;
 	
 	private Vector3 position;
 	
@@ -35,8 +35,10 @@ public class Node : MonoBehaviour {
 	
     void OnTriggerEnter(Collider other) {
         if(other.tag == "Enemy") {
-			if(!objective) {
+			//if(!objective) {
+			if(successor != null) {
 				other.gameObject.GetComponent<Enemy>().setTarget(successor);
+			}
 				/*if(successors.Length != 0) {
 					if(successors.Length == 1){
 
@@ -51,7 +53,7 @@ public class Node : MonoBehaviour {
 						}
 					}
 				}*/
-			}
+			//}
 		}
     }
 	
