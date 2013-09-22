@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BuildDetect.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TowerTile.cs">
     <Files>
-      <File FileName="Assets\Scripts\BuildDetect.cs" Line="36" Column="6" />
-      <File FileName="Assets\Scripts\MapGenerator.cs" Line="43" Column="3" />
+      <File FileName="Assets\Scripts\BuildDetect.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TowerTile.cs" Line="18" Column="22" />
+      <File FileName="Assets\Scripts\MapGenerator.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Enemy.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Node.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\SpinInCircle.cs" Line="1" Column="1" />

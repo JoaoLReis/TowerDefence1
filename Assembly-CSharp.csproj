@@ -44,6 +44,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\BuildDetect.cs" />
      <Compile Include="Assets\Scripts\DomeReached.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
